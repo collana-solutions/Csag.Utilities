@@ -8,8 +8,8 @@
     <Company>Neolution AG</Company>
     <PackageReadmeFile>README.md</PackageReadmeFile>
     <PackageIcon>icon.png</PackageIcon>
-    <PackageProjectUrl>https://github.com/neolution-ch/Neolution.Utilities</PackageProjectUrl>
-    <RepositoryUrl>https://github.com/neolution-ch/Neolution.Utilities</RepositoryUrl>
+    <PackageProjectUrl>https://github.com/collana-solutions/Neolution.Utilities</PackageProjectUrl>
+    <RepositoryUrl>https://github.com/collana-solutions/Neolution.Utilities</RepositoryUrl>
     <RepositoryType>git</RepositoryType>
     <PackageTags>dotnet;utilities;extensions;helpers;neolution</PackageTags>
     <PackageLicenseExpression>MIT</PackageLicenseExpression>
