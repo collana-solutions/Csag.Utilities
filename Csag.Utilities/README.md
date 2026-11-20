@@ -1,6 +1,6 @@
 # Csag.Utilities
 
-Extension methods and helpers for everyday .NET code. The package does not depend on any framework beyond `Microsoft.Extensions.Options.ConfigurationExtensions`, so it fits into any .NET project.
+Extension methods and helpers for everyday .NET code. Its only dependency is `Microsoft.Extensions.Options.ConfigurationExtensions`, so it fits into any .NET project.
 
 ## Installation
 
