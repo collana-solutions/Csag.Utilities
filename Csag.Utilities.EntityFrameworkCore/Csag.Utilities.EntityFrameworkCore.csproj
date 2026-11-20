@@ -1,0 +1,17 @@
+﻿<Project Sdk="Microsoft.NET.Sdk">
+
+  <PropertyGroup>
+    <Version>2.1.0</Version>
+    <Description>Entity Framework Core extensions in the Csag.Utilities family: the ISortableEntity interface and DbSet extensions that compute the next sort order.</Description>
+    <PackageTags>utilities;extensions;entityframeworkcore;efcore;dbset</PackageTags>
+  </PropertyGroup>
+
+  <ItemGroup>
+    <PackageReference Include="Microsoft.EntityFrameworkCore" Version="10.0.7" />
+    <PackageReference Include="Neolution.CodeAnalysis" Version="3.2.2">
+      <PrivateAssets>all</PrivateAssets>
+      <IncludeAssets>runtime; build; native; contentfiles; analyzers; buildtransitive</IncludeAssets>
+    </PackageReference>
+  </ItemGroup>
+
+</Project>
