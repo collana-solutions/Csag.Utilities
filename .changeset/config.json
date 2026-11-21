@@ -8,8 +8,8 @@
   "fixed": [
     [
       "@collana-solutions/csag-utilities",
-      "@collana-solutions/csag-utilities-asp-net-core",
-      "@collana-solutions/csag-utilities-entity-framework-core"
+      "@collana-solutions/csag-utilities-aspnetcore",
+      "@collana-solutions/csag-utilities-entityframeworkcore"
     ]
   ],
   "linked": [],

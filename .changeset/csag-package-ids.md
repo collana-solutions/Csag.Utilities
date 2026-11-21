@@ -1,7 +1,7 @@
 ---
 "@collana-solutions/csag-utilities": major
-"@collana-solutions/csag-utilities-asp-net-core": major
-"@collana-solutions/csag-utilities-entity-framework-core": major
+"@collana-solutions/csag-utilities-aspnetcore": major
+"@collana-solutions/csag-utilities-entityframeworkcore": major
 ---
 
 The packages move to new IDs and namespaces. The API and the behavior are the same as in 2.1.0.
