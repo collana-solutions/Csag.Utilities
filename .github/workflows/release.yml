@@ -106,11 +106,12 @@ jobs:
             const published = JSON.parse(process.env.PUBLISHED_PACKAGES);
             if (!published.length) return;
 
-            const newVersion = published[0].version;
-            const newMajor = parseInt(newVersion.split('.')[0], 10);
-
-            // Only act on stable major bumps (not prereleases)
-            if (newVersion.includes('-') || newMajor < 1) return;
+            // Only a stable N.0.0 release starts a new major. Prereleases, 0.x versions and
+            // every later release of the same major leave the release branches alone.
+            const newVersion = published[0].version.match(/^(\d+)\.(\d+)\.(\d+)$/);
+            if (!newVersion) return;
+            const [newMajor, newMinor, newPatch] = newVersion.slice(1).map(Number);
+            if (newMajor < 1 || newMinor !== 0 || newPatch !== 0) return;
 
             const prevMajor = newMajor - 1;
             const branchName = `release/v${prevMajor}.x`;
@@ -135,10 +136,10 @@ jobs:
               per_page: 100,
             });
 
-            // Newest stable release of the previous major. Only tags of the packages just
-            // published count, and versions are compared numerically because the tag list
-            // API does not return tags in version order. The bare vX.Y.Z tags up to v2.1.0
-            // released the Neolution.Utilities* IDs, so they never start a release branch.
+            // Newest stable release of the previous major. Only <package>@X.Y.Z tags of the
+            // packages just published count, so tags from an earlier release tool (v1.2.3,
+            // 1.2.3) or from before a package rename never match. Versions are compared
+            // numerically because the tag list API does not return tags in version order.
             const publishedNames = new Set(published.map(p => p.name));
             const prevTag = tags
               .map(t => {
