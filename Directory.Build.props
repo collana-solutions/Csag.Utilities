@@ -3,22 +3,35 @@
     <TargetFramework>net10.0</TargetFramework>
     <ImplicitUsings>enable</ImplicitUsings>
     <Nullable>enable</Nullable>
+    <!-- The workflows restore with locked mode, so every project keeps a packages.lock.json. -->
     <RestorePackagesWithLockFile>true</RestorePackagesWithLockFile>
-    <Description>This is a collection of utilities that we have created to help with our development process.</Description>
-    <Company>Neolution AG</Company>
+    <!-- Deterministic builds with normalized source paths, in CI only. Local builds keep real paths for debugging. -->
+    <ContinuousIntegrationBuild Condition="'$(GITHUB_ACTIONS)' == 'true'">true</ContinuousIntegrationBuild>
+  </PropertyGroup>
+
+  <!-- Package metadata shared by every packable project. -->
+  <PropertyGroup>
+    <Authors>collana solutions AG</Authors>
+    <Company>collana solutions AG</Company>
+    <Copyright>Copyright © collana solutions AG</Copyright>
+    <PackageLicenseExpression>MIT</PackageLicenseExpression>
     <PackageReadmeFile>README.md</PackageReadmeFile>
     <PackageIcon>icon.png</PackageIcon>
-    <PackageProjectUrl>https://github.com/collana-solutions/Neolution.Utilities</PackageProjectUrl>
-    <RepositoryUrl>https://github.com/collana-solutions/Neolution.Utilities</RepositoryUrl>
+    <PackageProjectUrl>https://github.com/collana-solutions/Csag.Utilities</PackageProjectUrl>
+    <RepositoryUrl>https://github.com/collana-solutions/Csag.Utilities</RepositoryUrl>
     <RepositoryType>git</RepositoryType>
-    <PackageTags>dotnet;utilities;extensions;helpers;neolution</PackageTags>
-    <PackageLicenseExpression>MIT</PackageLicenseExpression>
-    <PackageReleaseNotes>See CHANGELOG.md for release notes.</PackageReleaseNotes>
-    <Copyright>Copyright (c) 2025 Neolution AG</Copyright>
+    <!-- Source Link: the repository URL and commit go into the package, files outside git into the PDB. -->
+    <PublishRepositoryUrl>true</PublishRepositoryUrl>
+    <EmbedUntrackedSources>true</EmbedUntrackedSources>
+    <!-- A .snupkg symbol package next to every .nupkg. -->
+    <IncludeSymbols>true</IncludeSymbols>
+    <SymbolPackageFormat>snupkg</SymbolPackageFormat>
   </PropertyGroup>
 
   <ItemGroup>
-    <None Include="$(MSBuildThisFileDirectory)\README.md" Pack="true" PackagePath="" />
-    <None Include="$(MSBuildThisFileDirectory)\icon.png" Pack="true" PackagePath="" />
+    <!-- Relative to each project, so every packed project brings its own README.md. -->
+    <None Include="README.md" Pack="true" PackagePath="\" />
+    <!-- One icon at the repository root for all packages. -->
+    <None Include="$(MSBuildThisFileDirectory)icon.png" Pack="true" PackagePath="\" Visible="false" />
   </ItemGroup>
 </Project>

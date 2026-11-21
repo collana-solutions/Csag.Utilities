@@ -1,11 +1,9 @@
 # Changelog
 
-All notable changes to this project will be documented in this file.
+This file lists the releases up to 2.1.0, published as `Neolution.Utilities`, `Neolution.Utilities.AspNetCore` and `Neolution.Utilities.EntityFrameworkCore`. From 3.0.0 on, the packages are published as `Csag.Utilities`, `Csag.Utilities.AspNetCore` and `Csag.Utilities.EntityFrameworkCore`, and each package has its own `CHANGELOG.md` in its project folder.
 
 The format is based on [Keep a Changelog](https://keepachangelog.com/en/1.1.0/),
 and this project adheres to [Semantic Versioning](https://semver.org/spec/v2.0.0.html).
-
-## [Unreleased]
 
 ## [2.1.0] - 2026-09-14
 
@@ -36,7 +34,6 @@ and this project adheres to [Semantic Versioning](https://semver.org/spec/v2.0.0
 - `IFormFile` extension method (AspNetCore package only)
 - `DbSet` extension methods for ISortableEntity interface (EntityFrameworkCore package only)
 
-[Unreleased]: https://github.com/neolution-ch/Neolution.Utilities/compare/v2.1.0...HEAD
 [2.1.0]: https://github.com/neolution-ch/Neolution.Utilities/compare/v2.0.0...v2.1.0
 [2.0.0]: https://github.com/neolution-ch/Neolution.Utilities/compare/v1.0.0...v2.0.0
 [1.0.0]: https://github.com/neolution-ch/Neolution.Utilities/compare/v1.0.0-rc.1...v1.0.0
