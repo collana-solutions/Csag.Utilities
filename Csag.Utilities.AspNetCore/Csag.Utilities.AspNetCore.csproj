@@ -1,7 +1,7 @@
 ﻿<Project Sdk="Microsoft.NET.Sdk">
 
   <PropertyGroup>
-    <Version>2.1.0</Version>
+    <Version>3.0.0</Version>
     <Description>ASP.NET Core extensions in the Csag.Utilities family: read an uploaded IFormFile into a byte array.</Description>
     <PackageTags>utilities;extensions;aspnetcore;iformfile</PackageTags>
   </PropertyGroup>

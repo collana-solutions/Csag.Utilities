@@ -1,7 +1,7 @@
 ﻿<Project Sdk="Microsoft.NET.Sdk">
 
   <PropertyGroup>
-    <Version>2.1.0</Version>
+    <Version>3.0.0</Version>
     <Description>Extension methods and helpers for everyday .NET code: string truncation, padded StringBuilder lines, DateTime checks, CultureInfo language codes, IEnumerable helpers, strongly typed IConfiguration and IServiceCollection options binding, and human-readable file sizes.</Description>
     <PackageTags>utilities;extensions;helpers;configuration;options</PackageTags>
   </PropertyGroup>
