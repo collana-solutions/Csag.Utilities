@@ -1,0 +1,18 @@
+---
+"@collana-solutions/csag-utilities": patch
+"@collana-solutions/csag-utilities-aspnetcore": patch
+"@collana-solutions/csag-utilities-entityframeworkcore": patch
+---
+
+Bump the nuget-ecosystem group with 8 updates
+
+| Package | From | To | Bump |
+|---------|------|----|------|
+| coverlet.collector | 10.0.0 | 10.1.0 | 🟡 minor |
+| Microsoft.EntityFrameworkCore | 10.0.7 | 10.0.14 | 🟢 patch |
+| Microsoft.EntityFrameworkCore.InMemory | 10.0.7 | 10.0.14 | 🟢 patch |
+| Microsoft.Extensions.Configuration | 10.0.7 | 10.0.14 | 🟢 patch |
+| Microsoft.Extensions.DependencyInjection | 10.0.7 | 10.0.14 | 🟢 patch |
+| Microsoft.Extensions.Options.ConfigurationExtensions | 10.0.7 | 10.0.14 | 🟢 patch |
+| Microsoft.NET.Test.Sdk | 18.5.1 | 18.11.0 | 🟡 minor |
+| xunit.runner.visualstudio | 3.1.5 | 4.0.1 | 🔴 major |
