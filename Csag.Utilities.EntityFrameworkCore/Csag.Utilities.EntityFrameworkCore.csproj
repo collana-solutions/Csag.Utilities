@@ -1,7 +1,7 @@
 ﻿<Project Sdk="Microsoft.NET.Sdk">
 
   <PropertyGroup>
-    <Version>2.1.0</Version>
+    <Version>3.0.0</Version>
     <Description>Entity Framework Core extensions in the Csag.Utilities family: the ISortableEntity interface and DbSet extensions that compute the next sort order.</Description>
     <PackageTags>utilities;extensions;entityframeworkcore;efcore;dbset</PackageTags>
   </PropertyGroup>
