@@ -10,11 +10,11 @@
       },
       "Csag.CodeAnalysis.TestsRuleset": {
         "type": "Direct",
-        "requested": "[3.2.2, )",
-        "resolved": "3.2.2",
-        "contentHash": "YEh0sgl37NO5b+sjGPkgXDqaU5cg+ND0aIdZOjV2ttz3aE8dthov/muM9Od/mQzeJNcFaGH1/SlCDLQg7cyVKw==",
+        "requested": "[3.3.0, )",
+        "resolved": "3.3.0",
+        "contentHash": "lSQ9byuOxV3DUDtcyEkZnt9URnk/R177MDUGoY//DR8IfbyE1WAXZ9Schq/Mdy79hWTC68uTiSjWP0lTri7BQA==",
         "dependencies": {
-          "SonarAnalyzer.CSharp": "9.20.0.85982",
+          "SonarAnalyzer.CSharp": "9.32.0.97167",
           "StyleCop.Analyzers.Unstable": "1.2.0.556"
         }
       },
@@ -254,8 +254,8 @@
       },
       "SonarAnalyzer.CSharp": {
         "type": "Transitive",
-        "resolved": "9.20.0.85982",
-        "contentHash": "c0IYtFg4mYusTafTy0Bs5wev45vRKNShkuoWyQyPMbC6imEFHL7tY/7xbbUJd6JNLYx5vP8wyi2LgiBsMHqb2Q=="
+        "resolved": "9.32.0.97167",
+        "contentHash": "Yxk86RV+8ynJpUhku1Yw2hITFmnmXKkXJ73cIFSy85ol5SnWREQg9RuTyV8nI7V7+pyLKpCfRmD7P0widsgjkg=="
       },
       "StyleCop.Analyzers.Unstable": {
         "type": "Transitive",

@@ -55,7 +55,7 @@ public class DbSetExtensionsTests
         // Arrange
         using var context = new TestDbContext();
         using var cts = new CancellationTokenSource();
-        cts.Cancel();
+        await cts.CancelAsync();
 
         // Act & Assert
         await Should.ThrowAsync<OperationCanceledException>(async () =>
@@ -93,7 +93,7 @@ public class DbSetExtensionsTests
         context.SortableEntities.AddRange(
             new TestDbContext.SortableEntity { SortOrder = 0 },
             new TestDbContext.SortableEntity { SortOrder = 1 });
-        context.SaveChanges();
+        await context.SaveChangesAsync();
 
         // Act
         var nextSortOrder = await context.SortableEntities.GetNextSortOrderAsync(CancellationToken.None);
@@ -117,7 +117,7 @@ public class DbSetExtensionsTests
             new TestDbContext.SortableEntity { Group = "A", SortOrder = 2 },
             new TestDbContext.SortableEntity { Group = "B", SortOrder = 0 },
             new TestDbContext.SortableEntity { Group = "B", SortOrder = 1 });
-        context.SaveChanges();
+        await context.SaveChangesAsync();
 
         // Act
         var nextSortOrder = await context.SortableEntities.GetNextSortOrderAsync(x => x.Group == "B", CancellationToken.None);
@@ -139,7 +139,7 @@ public class DbSetExtensionsTests
             new TestDbContext.SortableEntity { Group = "A", SortOrder = 0 },
             new TestDbContext.SortableEntity { Group = "A", SortOrder = 1 },
             new TestDbContext.SortableEntity { Group = "A", SortOrder = 2 });
-        context.SaveChanges();
+        await context.SaveChangesAsync();
 
         // Act
         var nextSortOrder = await context.SortableEntities.GetNextSortOrderAsync(x => x.Group == "B", CancellationToken.None);
@@ -162,7 +162,7 @@ public class DbSetExtensionsTests
             new TestDbContext.SortableEntity { SortOrder = 0 },
             new TestDbContext.SortableEntity { SortOrder = 2 },
             new TestDbContext.SortableEntity { SortOrder = 2 });
-        context.SaveChanges();
+        await context.SaveChangesAsync();
 
         // Act
         var nextSortOrder = await context.SortableEntities.GetNextSortOrderAsync(CancellationToken.None);
